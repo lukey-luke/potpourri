@@ -9,6 +9,7 @@ def get_image(img_path):
     img = PIL.Image.open(img_path)
     return np.array(img_path)
 
+
 def get_models():
     applications = dir(tf.keras.applications)
     print(type(applications))
@@ -19,14 +20,12 @@ def get_models():
         print(isinstance(application, type))
 
 
-
 def main():
-    # glorious_image_path = '../twister_toque/PXL_20211013_055448184.jpg' 
+    # glorious_image_path = '../twister_toque/PXL_20211013_055448184.jpg'
     # img = PIL.Image.open(glorious_image_path)
     # img.show()
     get_models()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-
