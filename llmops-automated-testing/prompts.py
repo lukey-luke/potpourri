@@ -63,6 +63,9 @@ Question 2:{delimiter} <question 2>
 
 Question 3:{delimiter} <question 3>
 
+Additional rules:
+ - Only use explicit matches for the category, if the category is not an exact match to the categories in the quiz bank, answer that you do not have information.
+ - If the user asks a question about a subject you do not have information about in the quiz banks, answer "I'm sorry, I don't have information about that."
 """
 
 from langchain.prompts import ChatPromptTemplate

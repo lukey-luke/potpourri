@@ -38,4 +38,23 @@ def eval_expected_words(
     '{expected_words}', but it did not"
 
 
+def evaluate_refusal(
+    system_message,
+    question,
+    decline_response,
+    human_template="{question}", 
+    llm=ChatOpenAI(model="gpt-3.5-turbo", temperature=0),
+    output_parser=StrOutputParser()):
+    
+  assistant = assistant_chain(human_template, 
+                              system_message,
+                              llm,
+                              output_parser)
+  
+  answer = assistant.invoke({"question": question})
+  print(answer)
+  
+  assert decline_response.lower() in answer.lower(), \
+    f"Expected the bot to decline with \
+    '{decline_response}' got {answer}"
 
