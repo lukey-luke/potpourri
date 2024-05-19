@@ -88,7 +88,7 @@ def main():
         opt.apply_gradients([(grad, image)])
         image.assign(clip_0_1(image))
 
-    content_path = "../../twister_toque/PXL_20211013_055448184.jpg"
+    content_path = "../../twister_toque/toque.png"
     style_path = "../../twister_toque/rapids.jpeg"
     print("loading imgs")
     style_img = load_img(style_path)

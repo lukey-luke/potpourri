@@ -1,3 +1,3 @@
-# What!!?
-Using tensorflow's [deepdream](https://www.tensorflow.org/tutorials/generative/deepdream) to come up with some _wacky_ images just for fun.
+# Generative AI testing
+ - repo for exploring various generative AI models and ML tools
 
